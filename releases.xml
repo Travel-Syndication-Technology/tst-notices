@@ -1,0 +1,23 @@
+---
+layout: none
+permalink: /releases.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }} Releases</title>
+    <link>{{ site.url }}{{ site.baseurl }}/releases/</link>
+    <description>Release notes feed for {{ site.title }}</description>
+    <language>en-us</language>
+    {% assign releases = site.posts | where: "category", "release" %}
+    {% for post in releases %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.summary | default: post.excerpt | strip_html | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

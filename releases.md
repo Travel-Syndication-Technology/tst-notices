@@ -5,6 +5,7 @@ permalink: /releases/
 ---
 
 {% assign releases = site.posts | where: "category", "release" %}
+<p class="muted" style="margin-bottom: 0.5rem;"><a href="{{ '/releases.xml' | relative_url }}">Subscribe to releases feed</a></p>
 {% for post in releases %}
 ### [{{ post.title }}]({{ post.url | relative_url }})
 - **When:** {{ post.date | date: "%Y-%m-%d" }}

@@ -23,8 +23,13 @@
     <main class="container">
       {{ content }}
     </main>
-    <footer class="container">
-      <p>&copy; {{ "now" | date: "%Y" }} Travel Syndication Technology</p>
-    </footer>
+     <footer class="container">
+       <p>&copy; {{ "now" | date: "%Y" }} Travel Syndication Technology</p>
+       <p class="muted" style="margin-top: 0.25rem;">
+         <a href="{{ '/updates.xml' | relative_url }}">Updates feed</a> •
+         <a href="{{ '/releases.xml' | relative_url }}">Releases feed</a>
+       </p>
+     </footer>
+
   </body>
 </html>
