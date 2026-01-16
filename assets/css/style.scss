@@ -52,6 +52,12 @@ main.container {
   margin: 0;
 }
 
+@media (min-width: 1024px) {
+  .updates-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .updates-grid li,
 header nav ul,
 .card ul {
