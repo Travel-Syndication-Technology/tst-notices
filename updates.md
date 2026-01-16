@@ -17,7 +17,7 @@ permalink: /updates/
       <div class="meta-row">
         <span>{{ item.timestamp | date: "%b %d, %Y" }} • {{ item.timestamp | date: "%H:%M %Z" }}</span>
       </div>
-      <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <div class="meta-row">
         <span class="pill">{{ item.type | default: "update" }}</span>
         {% if item.env %}<span class="badge">{{ item.env }}</span>{% endif %}
@@ -26,9 +26,9 @@ permalink: /updates/
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 220 }}</p>
       {% if item.release_url %}
-      <p class="summary"><strong>Release notes:</strong> <a href="{{ item.release_url }}">View release details</a></p>
+      <p class="summary"><strong>Release notes:</strong> <a href="{{ item.release_url | relative_url }}">View release details</a></p>
       {% endif %}
-      <a href="{{ item.url }}">Read full update →</a>
+      <a href="{{ item.url | relative_url }}">Read full update →</a>
     </article>
   </li>
 {% endfor %}

@@ -16,11 +16,11 @@ layout: default
     <p><strong>Summary:</strong> {{ page.summary }}</p>
     {% endif %}
     {% if page.release_url %}
-    <p><strong>Release notes:</strong> <a href="{{ page.release_url }}">View release details</a></p>
+    <p><strong>Release notes:</strong> <a href="{{ page.release_url | relative_url }}">View release details</a></p>
     {% endif %}
   </header>
   <div class="post-content">
     {{ content }}
   </div>
-  <p><a href="/updates/">← Back to Updates</a></p>
+  <p><a href="{{ '/updates/' | relative_url }}">← Back to Updates</a></p>
 </article>
