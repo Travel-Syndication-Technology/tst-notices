@@ -5,11 +5,11 @@ permalink: /updates/
 ---
 
 <section class="card">
-  <h1>{{ page.title }}</h1>
-  <p class="muted">TST (Travel Syndication Technology) releases, hotfixes, configuration changes, and incident notes.</p>
+  Travel Syndication Technology releases, hotfixes, configuration changes, and incident notes.
 </section>
 
 {% assign items = site.updates | sort: "timestamp" | reverse %}
+
 <ul class="updates-grid">
 {% for item in items %}
   <li>
