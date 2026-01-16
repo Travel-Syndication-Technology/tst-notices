@@ -1,0 +1,14 @@
+# Build artifacts
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# Bundler / gems
+.bundle/
+vendor/
+
+# OS / misc
+.DS_Store
+*.log
+tmp/
