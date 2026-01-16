@@ -25,6 +25,9 @@ permalink: /updates/
         {% if item.status %}<span class="badge">Status: {{ item.status }}</span>{% endif %}
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 220 }}</p>
+      {% if item.release_url %}
+      <p class="summary"><strong>Release notes:</strong> <a href="{{ item.release_url }}">View release details</a></p>
+      {% endif %}
       <a href="{{ item.url }}">Read full update →</a>
     </article>
   </li>
