@@ -4,7 +4,7 @@ timestamp: 2026-01-17 05:45:00 -0500
 type: incident
 env: prod
 severity: "SEV-1"
-status: draft
+status: active
 incident_status: "Resolved"
 summary: "Hotel Shopping was unavailable due to a critical infrastructure failure."
 ---
