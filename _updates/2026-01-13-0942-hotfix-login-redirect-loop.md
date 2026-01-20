@@ -7,6 +7,8 @@ summary: "Fixed an authentication edge case that could cause repeated redirects 
 services:
   - auth
   - web-app
+status: active
+status_label: "Deployed"
 ---
 
 ## Impact

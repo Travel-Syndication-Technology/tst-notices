@@ -13,3 +13,4 @@ Gemfile.lock
 .DS_Store
 *.log
 tmp/
+.idea/

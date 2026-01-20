@@ -6,6 +6,8 @@ env: prod
 summary: "Adjusted background processing concurrency to reduce queue latency during peak load while maintaining safe resource limits."
 services:
   - workers
+status: active
+status_label: "Applied"
 ---
 
 ## What changed

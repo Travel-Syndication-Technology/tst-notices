@@ -9,7 +9,7 @@ permalink: /updates/
   <p class="muted" style="margin: 0.35rem 0 0;"><a href="{{ '/updates.xml' | relative_url }}">Subscribe to updates feed</a></p>
 </section>
 
-{% assign items = site.updates | sort: "timestamp" | reverse %}
+{% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
 
 <ul class="updates-grid">
 {% for item in items %}

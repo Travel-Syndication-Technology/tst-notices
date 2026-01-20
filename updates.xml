@@ -6,19 +6,19 @@ permalink: /updates.xml
 <rss version="2.0">
   <channel>
     <title>{{ site.title }} Updates</title>
-    <link>{{ site.url }}{{ site.baseurl }}/updates/</link>
+    <link>{{ site.url }}{{ '/updates/' | relative_url }}</link>
     <description>Operational updates feed for {{ site.title }}</description>
     <language>en-us</language>
-    {% assign items = site.updates | sort: "timestamp" | reverse %}
+    {% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
     {% for item in items %}
     <item>
       <title>{{ item.title | xml_escape }}</title>
-      <link>{{ site.url }}{{ item.url }}</link>
-      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      <link>{{ site.url }}{{ item.url | relative_url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url | relative_url }}</guid>
       <pubDate>{{ item.timestamp | date_to_rfc822 }}</pubDate>
       <description>{{ item.summary | default: item.excerpt | strip_html | xml_escape }}</description>
       {% if item.release_url %}
-      <source url="{{ site.url }}{{ item.release_url }}">Release notes</source>
+      <source url="{{ site.url }}{{ item.release_url | relative_url }}">Release notes</source>
       {% endif %}
     </item>
     {% endfor %}

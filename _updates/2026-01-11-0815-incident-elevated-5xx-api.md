@@ -4,7 +4,8 @@ timestamp: 2026-01-11 08:15:00 -0500
 type: incident
 env: prod
 severity: "SEV-2"
-status: "Resolved"
+status: active
+status_label: "Resolved"
 summary: "Some API requests intermittently failed due to reduced capacity in a dependent service. Service was restored after mitigation and scaling adjustments."
 services:
   - public-api

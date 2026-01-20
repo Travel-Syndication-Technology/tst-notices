@@ -14,3 +14,9 @@ defaults:
     values:
       layout: update
       permalink: /updates/:name/
+      status: active
+  - scope:
+      path: ""
+      type: posts
+    values:
+      status: active
