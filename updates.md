@@ -6,7 +6,6 @@ permalink: /updates/
 
 <section class="card">
   Travel Syndication Technology releases, hotfixes, configuration changes, and incident notes.
-  <p class="muted" style="margin: 0.35rem 0 0; font-size: 0.9rem;"><a href="{{ '/updates.xml' | relative_url }}">Subscribe to updates feed</a></p>
 </section>
 
 {% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
