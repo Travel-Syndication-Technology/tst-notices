@@ -6,7 +6,7 @@ permalink: /updates/
 
 <section class="card">
   Travel Syndication Technology releases, hotfixes, configuration changes, and incident notes.
-  <p class="muted" style="margin: 0.35rem 0 0;"><a href="{{ '/updates.xml' | relative_url }}">Subscribe to updates feed</a></p>
+  <p class="muted" style="margin: 0.35rem 0 0; font-size: 0.9rem;"><a href="{{ '/updates.xml' | relative_url }}">Subscribe to updates feed</a></p>
 </section>
 
 {% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
@@ -23,7 +23,7 @@ permalink: /updates/
         <span class="pill">{{ item.type | default: "update" }}</span>
         {% if item.env %}<span class="badge">{{ item.env }}</span>{% endif %}
         {% if item.severity %}<span class="badge">Severity: {{ item.severity }}</span>{% endif %}
-        {% if item.status %}<span class="badge">Status: {{ item.status }}</span>{% endif %}
+        {% if item.incident_status %}<span class="badge">Status: {{ item.incident_status }}</span>{% endif %}
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 220 }}</p>
       {% if item.release_url %}
