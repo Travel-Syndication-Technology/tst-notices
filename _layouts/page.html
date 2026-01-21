@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="page-shell stack-lg">
+  {% unless page.hide_header %}
+    {% if page.title %}
+    <header class="page-header">
+      <p class="eyebrow">TST Engineering</p>
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.description or page.summary %}
+      <p class="lead">{{ page.description | default: page.summary }}</p>
+      {% endif %}
+    </header>
+    {% endif %}
+  {% endunless %}
+
+  <div class="stack-lg">
+    {{ content }}
+  </div>
+</section>

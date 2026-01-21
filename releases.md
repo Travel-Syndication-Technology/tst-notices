@@ -2,12 +2,34 @@
 layout: page
 title: Releases
 permalink: /releases/
+summary: Production releases and milestones from TST Engineering.
 ---
 
-{% assign releases = site.posts | where: "category", "release" | where: "status", "active" %}
+<section class="card hero">
+  <p class="eyebrow">Release cadence</p>
+  <h2 class="page-title">Production-ready builds and milestones</h2>
+  <p class="summary">Browse the latest engineering releases with quick links to full notes and related updates.</p>
+  <div class="meta-row">
+    <span class="badge">Timezone: {{ site.timezone | default: "UTC" }}</span>
+  </div>
+</section>
+
+{% assign releases = site.posts | where: "category", "release" | where: "status", "active" | sort: "date" | reverse %}
+
+<div class="releases-grid">
 {% for post in releases %}
-### [{{ post.title }}]({{ post.url | relative_url }})
-- **When:** {{ post.date | date: "%Y-%m-%d" }}
-{% if post.version %}- **Version:** {{ post.version }}{% endif %}
-- **Summary:** {{ post.summary | default: post.excerpt | strip_html | truncate: 220 }}
+  {% assign release_type = post.category | default: 'release' | downcase %}
+  <article class="card release-card type-{{ release_type }}">
+    <div class="post-meta-bar">
+      <span class="pill {{ release_type }}">Release</span>
+      {% if post.version %}<span class="badge soft">Version {{ post.version }}</span>{% endif %}
+      <span class="meta">{{ post.date | date: "%b %d, %Y" }}</span>
+    </div>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="summary">{{ post.summary | default: post.excerpt | strip_html | truncate: 210 }}</p>
+    <div class="card-actions">
+      <a href="{{ post.url | relative_url }}">Read release →</a>
+    </div>
+  </article>
 {% endfor %}
+</div>

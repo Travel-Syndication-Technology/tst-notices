@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% assign post_type = page.category | default: 'post' | downcase %}
+
+<article class="entry card type-{{ post_type }}">
+  <div class="post-meta-bar">
+    <span class="pill {{ post_type }}">{{ post_type }}</span>
+    {% if page.version %}<span class="badge soft">Version {{ page.version }}</span>{% endif %}
+    <span class="meta">{{ page.date | date: "%b %d, %Y" }}</span>
+  </div>
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  {% if page.summary %}
+  <div class="summary-callout">
+    {{ page.summary }}
+  </div>
+  {% endif %}
+
+  <div class="content-flow">
+    {{ content }}
+  </div>
+
+  <div class="entry-footer">
+    <a href="{{ '/releases/' | relative_url }}">← Back to Releases</a>
+    {% if page.version %}<span class="meta">Build {{ page.version }}</span>{% endif %}
+  </div>
+</article>

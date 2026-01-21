@@ -2,25 +2,49 @@
 layout: default
 ---
 
-<article class="post card">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      {{ page.timestamp | date: "%Y-%m-%d %H:%M %Z" }}
-      {% if page.type %} • {{ page.type }}{% endif %}
-      {% if page.env %} • {{ page.env }}{% endif %}
-      {% if page.severity %} • severity: {{ page.severity }}{% endif %}
-      {% if page.status_label %} • status: {{ page.status_label }}{% endif %}
-    </p>
-    {% if page.summary %}
-    <p><strong>Summary:</strong> {{ page.summary }}</p>
-    {% endif %}
-    {% if page.release_url %}
-    <p><strong>Release notes:</strong> <a href="{{ page.release_url | relative_url }}">View release details</a></p>
-    {% endif %}
-  </header>
-  <div class="post-content">
+{% assign update_type = page.type | default: 'update' | downcase %}
+
+<article class="entry card type-{{ update_type }}">
+  <div class="post-meta-bar">
+    <span class="pill {{ update_type }}">{{ update_type }}</span>
+    {% if page.env %}<span class="badge">Env: {{ page.env }}</span>{% endif %}
+    {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}
+    {% if page.status_label %}<span class="badge subtle">Status: {{ page.status_label }}</span>{% endif %}
+    <span class="meta">{{ page.timestamp | date: "%b %d, %Y" }} • {{ page.timestamp | date: "%H:%M %Z" }}</span>
+  </div>
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  {% if page.summary %}
+  <div class="summary-callout">
+    {{ page.summary }}
+  </div>
+  {% endif %}
+
+  {% if page.release_url %}
+  <div class="link-callout">
+    <strong>Release notes:</strong>
+    <a href="{{ page.release_url | relative_url }}">View release details</a>
+  </div>
+  {% endif %}
+
+  {% if page.services %}
+  <div class="meta-row">
+    <span class="eyebrow">Services</span>
+    <ul class="service-tags">
+      {% for service in page.services %}
+      <li>{{ service }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="content-flow">
     {{ content }}
   </div>
-  <p><a href="{{ '/updates/' | relative_url }}">← Back to Updates</a></p>
+
+  <div class="entry-footer">
+    <a href="{{ '/updates/' | relative_url }}">← Back to Updates</a>
+    <span class="meta">Last updated {{ page.timestamp | date: "%b %d, %Y" }}</span>
+  </div>
 </article>
