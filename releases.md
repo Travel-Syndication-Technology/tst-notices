@@ -9,9 +9,6 @@ summary: Production releases and milestones from TST Engineering.
   <p class="eyebrow">Release cadence</p>
   <h2 class="page-title">Production-ready builds and milestones</h2>
   <p class="summary">Browse the latest engineering releases with quick links to full notes and related updates.</p>
-  <div class="meta-row">
-    <span class="badge">Timezone: {{ site.timezone | default: "UTC" }}</span>
-  </div>
 </section>
 
 {% assign releases = site.posts | where: "category", "release" | where: "status", "active" | sort: "date" | reverse %}
