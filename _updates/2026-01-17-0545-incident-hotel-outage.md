@@ -18,7 +18,7 @@ Between 05:45 and 07:25 ET the Hotel product was unavailable for shopping or boo
 ## Timeline (ET)
 - **05:45** - Alerts triggered when Hotel Shopping pages became unresponsive.
 - **07:16** - Applied mitigation, Hotel services began to recover.
-- **07:25** - Hotel services showed as fully recovered.
+- **07:25** - Hotel services fully recovered.
 - **07:55** - Root cause identified and corrected.
 
 ## Root cause
