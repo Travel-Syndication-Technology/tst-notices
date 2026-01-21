@@ -5,7 +5,8 @@ permalink: /updates/
 ---
 
 <section class="card">
-  Travel Syndication Technology releases, hotfixes, configuration changes, and incident notes.
+  <p>Travel Syndication Technology releases, hotfixes, configuration changes, and incident notes.</p>
+  <p><i>Next Release Expected: Monday, January 26th 2026</i></p>
 </section>
 
 {% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
