@@ -1,12 +1,12 @@
 ---
-title: "Incident: Hotel Shopping Outage"
-timestamp: 2026-01-17 05:45:00 -0500
+title: "Incident: SSO Login Outage" 
+timestamp: 2026-01-22 14:25:00 -0500
 type: incident
 env: prod
 severity: "SEV-1"
 status: active
 incident_status: "Resolved"
-summary: "Hotel Shopping was unavailable due to a critical infrastructure failure."
+summary: "Agents were unable to login via SSO to TST."
 ---
 
 ## Summary
