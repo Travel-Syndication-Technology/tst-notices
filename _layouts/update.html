@@ -9,7 +9,7 @@ layout: default
     <span class="pill {{ update_type }}">{{ update_type }}</span>
     {% if page.env %}<span class="badge">Env: {{ page.env }}</span>{% endif %}
     {% if page.severity %}<span class="badge">Severity: {{ page.severity }}</span>{% endif %}
-    {% if page.status_label %}<span class="badge subtle">Status: {{ page.status_label }}</span>{% endif %}
+    {% if page.status_label %}<span class="badge subtle">{{ page.status_label }}</span>{% endif %}
   </div>
   <div class="meta time-stamp">{{ page.timestamp | date: "%b %d, %Y" }} • {{ page.timestamp | date: "%H:%M %Z" }}</div>
 
@@ -30,7 +30,7 @@ layout: default
 
   {% if page.services %}
   <div class="meta-row">
-    <span class="eyebrow">Services</span>
+    <span class="eyebrow">Services: </span>
     <ul class="service-tags">
       {% for service in page.services %}
       <li>{{ service }}</li>

@@ -3,6 +3,7 @@ layout: page
 title: Updates
 permalink: /updates/
 summary: Latest releases, incidents, hotfixes, and configuration changes from the engineering team.
+hide_header: true
 ---
 
 <section class="card hero">
@@ -29,7 +30,7 @@ summary: Latest releases, incidents, hotfixes, and configuration changes from th
       <div class="meta-row">
         {% if item.env %}<span class="badge">Env: {{ item.env }}</span>{% endif %}
         {% if item.severity %}<span class="badge subtle">Severity: {{ item.severity }}</span>{% endif %}
-        {% if item.status_label %}<span class="badge soft">Status: {{ item.status_label }}</span>{% endif %}
+        {% if item.status_label %}<span class="badge soft">{{ item.status_label }}</span>{% endif %}
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 200 }}</p>
       {% if item.services %}

@@ -3,6 +3,7 @@ layout: page
 title: TST Engineering
 permalink: /
 summary: Release notes, incidents, and configuration changes from the engineering team.
+hide_header: true
 ---
 
 <section class="card hero stack-md">
