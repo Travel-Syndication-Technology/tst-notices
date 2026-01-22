@@ -30,7 +30,7 @@ hide_header: true
       <div class="meta-row">
         {% if item.env %}<span class="badge">{{ item.env | capitalize }}</span>{% endif %}
         {% if item.severity %}<span class="badge subtle">{{ item.severity }}</span>{% endif %}
-        {% if item.status_label %}<span class="badge soft">{{ item.status_label }}</span>{% endif %}
+        {% if item.incident_status %}<span class="badge soft">{{ item.incident_status }}</span>{% endif %}
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 200 }}</p>
       {% if item.services %}
