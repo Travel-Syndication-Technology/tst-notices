@@ -8,8 +8,8 @@ layout: default
   <div class="post-meta-bar">
     <span class="pill {{ post_type }}">{{ post_type }}</span>
     {% if page.version %}<span class="badge soft">Version {{ page.version }}</span>{% endif %}
-    <span class="meta">{{ page.date | date: "%b %d, %Y" }}</span>
   </div>
+  <div class="meta time-stamp">{{ page.date | date: "%b %d, %Y" }}</div>
 
   <h1 class="post-title">{{ page.title }}</h1>
 
