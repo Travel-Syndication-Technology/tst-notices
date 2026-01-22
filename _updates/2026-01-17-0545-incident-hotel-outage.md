@@ -10,11 +10,11 @@ summary: "Hotel Shopping was unavailable due to a critical infrastructure failur
 ---
 
 ## Summary
-Between 05:45 and 07:25 ET the Hotel product was unavailable for shopping or booking due to a failure in infrastructure critcal to the service.
+Between 05:45 and 07:25 ET the Hotel product was unavailable for shopping or booking due to a failure in infrastructure critical to the service.
 
 ## Customer impact
 - Customers were unable to shop or book hotel rooms.
-- 
+
 ## Timeline (ET)
 - **05:45** - Alerts triggered when Hotel Shopping pages became unresponsive.
 - **07:16** - Applied mitigation, Hotel services began to recover.
