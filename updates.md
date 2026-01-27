@@ -29,7 +29,7 @@ hide_header: true
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <div class="meta-row">
         {% if item.env %}<span class="badge">{{ item.env | capitalize }}</span>{% endif %}
-        {% if item.severity %}<span class="badge subtle">{{ item.severity }}</span>{% endif %}
+        {% if item.status_label %}<span class="badge subtle">{{ item.status_label }}</span>{% endif %}
         {% if item.incident_status %}<span class="badge soft">{{ item.incident_status }}</span>{% endif %}
       </div>
       <p class="summary">{{ item.summary | default: item.excerpt | strip_html | truncate: 200 }}</p>
