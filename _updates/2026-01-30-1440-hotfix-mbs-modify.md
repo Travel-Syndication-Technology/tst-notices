@@ -1,9 +1,9 @@
 ---
-title: "Hotfix: MBS Modification"
+title: "Hotfix: Manual Booking Modification"
 timestamp: 2026-01-30 14:40:00 -0500
 type: hotfix
 env: prod
-summary: "Fix for broken modification of Manual Booking Sheets"
+summary: "Fix for broken modification of Manual Cruise Bookings"
 services:
   - manual
 status: active
