@@ -17,10 +17,10 @@ hide_header: true
 
 {% assign items = site.updates | where: "status", "active" | sort: "timestamp" | reverse %}
 
-<ul class="updates-grid">
+<ul class="updates-grid" data-paginate="15">
 {% for item in items %}
   {% assign update_type = item.type | default: 'update' | downcase %}
-  <li>
+  <li class="paginate-item">
     <article class="card update-card type-{{ update_type }}">
       <div class="post-meta-bar">
         <span class="pill {{ update_type }}">{{ update_type }}</span>
@@ -48,3 +48,5 @@ hide_header: true
   </li>
 {% endfor %}
 </ul>
+
+<script src="{{ '/assets/js/paginate.js' | relative_url }}"></script>

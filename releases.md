@@ -14,10 +14,10 @@ hide_header: true
 
 {% assign releases = site.posts | where: "category", "release" | where: "status", "active" | sort: "date" | reverse %}
 
-<div class="releases-grid">
+<div class="releases-grid" data-paginate="15">
 {% for post in releases %}
   {% assign release_type = post.category | default: 'release' | downcase %}
-  <article class="card release-card type-{{ release_type }}">
+  <article class="card release-card type-{{ release_type }} paginate-item">
     <div class="post-meta-bar">
       <span class="pill {{ release_type }}">Release</span>
       {% if post.version %}<span class="badge soft">Version {{ post.version }}</span>{% endif %}
@@ -31,3 +31,5 @@ hide_header: true
   </article>
 {% endfor %}
 </div>
+
+<script src="{{ '/assets/js/paginate.js' | relative_url }}"></script>
