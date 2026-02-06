@@ -1,9 +1,9 @@
 ---
-title: "Hotfix: Manual Booking Modification"
+title: "Hotfix: Parks and Pleasant Holidays Fixes"
 timestamp: 2026-02-03 16:00:00 -0500
 type: hotfix
 env: prod
-summary: "Parks and Pleasant Holidays data fixes"
+summary: "Pricing issue in Parks and a flight data issue for Pleasant Holidays"
 services:
   - parks
   - prepack
