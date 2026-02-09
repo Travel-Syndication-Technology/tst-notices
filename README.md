@@ -2,15 +2,22 @@
 This repository publishes public-facing engineering updates (releases, hotfixes, configuration changes, and incident summaries) as a static site using GitHub Pages and Jekyll.
 
 ## Local development
+
 Prerequisites:
-- Ruby (recent version)
-- Bundler
+- Ruby 3.0+ (`ruby -v` to check)
+- Bundler (`gem install bundler` if not installed)
 
-Run:
-- `bundle install`
-- `bundle exec jekyll serve`
+First time setup:
+```
+bundle install
+```
 
-Then open the local URL printed in the output (usually `http://localhost:4000`).
+Run the local server:
+```
+bundle exec jekyll serve
+```
+
+Then open `http://localhost:4000/tst-notices/` in your browser.
 
 ## Adding an update
 1. Create a new Markdown file in `_updates/` with frontmatter.
@@ -24,9 +31,10 @@ Then open the local URL printed in the output (usually `http://localhost:4000`).
 Updates appear automatically at `/updates/`.
 
 ## Publishing on GitHub Pages
+
 In GitHub:
 1. Go to Settings → Pages
-2. Set Source to deploy from the `main` branch and `/ (root)`
+2. Set Source to deploy from the `master` branch and `/ (root)`
 3. Save
 
-GitHub Pages will build the Jekyll site automatically.
+GitHub Pages will build the Jekyll site automatically on every push to `master`.
