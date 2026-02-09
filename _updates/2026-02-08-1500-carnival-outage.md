@@ -1,6 +1,6 @@
 ---
 title: "Incident: Carnival Cruise Outage" 
-timestamp: 2026-02-08 15:00:00 -0500
+timestamp: 2026-02-08 17:00:00 -0500
 type: incident
 env: prod
 severity: "SEV-1"
@@ -13,4 +13,4 @@ summary: "Carnival Cruise inventory is unavailable to shop and book"
 Consumers and Agents are currently unable to shop and book Carnival Cruises.
 
 ## Timeline (ET)
-- **2026-02-08 15:00** - Errors on the Carnival API caused TST to be unable to retrieve and book inventory
+- **2026-02-08 17:00** - Errors on the Carnival API caused TST to be unable to retrieve and book inventory
