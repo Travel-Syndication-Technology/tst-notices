@@ -1,12 +1,12 @@
 ---
-title: "Incident: Pleasant Holidays API Outage"
+title: "Outage: Pleasant Holidays API Outage"
 timestamp: 2026-02-09 08:30:00 -0500
 type: incident
 env: prod
 severity: "SEV-1"
 status: active
 incident_status: "Resolved"
-summary: "Pleasant Holidays API was down for 45 minutes."
+summary: "Pleasant Holidays API was briefly unavailable."
 ---
 
 ## Customer impact
