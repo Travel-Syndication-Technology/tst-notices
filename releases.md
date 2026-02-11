@@ -20,7 +20,6 @@ hide_header: true
   <article class="card release-card type-{{ release_type }}">
     <div class="post-meta-bar">
       <span class="pill {{ release_type }}">Release</span>
-      {% if post.version %}<span class="badge soft">Version {{ post.version }}</span>{% endif %}
       <span class="meta">{{ post.date | date: "%b %d, %Y" }}</span>
     </div>
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
