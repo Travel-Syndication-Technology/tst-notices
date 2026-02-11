@@ -7,7 +7,7 @@ hide_header: true
 ---
 
 <section class="card hero">
-  <p class="eyebrow">Release cadence</p>
+  <p class="eyebrow">Releases</p>
   <h2 class="page-title">Production-ready builds and milestones</h2>
   <p class="summary">Browse the latest engineering releases with quick links to full notes and related updates.</p>
 </section>

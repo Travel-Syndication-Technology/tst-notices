@@ -317,9 +317,9 @@ header nav li {
 
 .post-meta-bar {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.45rem;
-  align-items: center;
+  align-items: flex-start;
   color: var(--brand-muted-strong);
   font-size: 0.95rem;
 }
